@@ -11,12 +11,27 @@ config();
 const app =exp()
 // Add body parser middleware
 //add cors middleware
-app.use(cors({
-    origin:["https://usermanagementweek8atp.vercel.app/"] // allow only frontend server
-}))
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://user-management-week8-atp.onrender.com",
+  "https://usermanagementweek8atp.vercel.app",
+];
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+app.options("*", cors());
 app.use(exp.json())
-// Forward req to UserAPI if path start with /userr-api
-app.use ("/user-api",UserApp)
+// Forward req to UserAPI if path start with /user-api
+app.use("/user-api", UserApp)
 
 // connect databse
 const connectDB = async() =>{
