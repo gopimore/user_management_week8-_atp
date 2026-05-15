@@ -13,12 +13,12 @@ const app =exp()
 //add cors middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://user-management-week8-atp.onrender.com",
   "https://usermanagementweek8atp.vercel.app",
 ];
+
 app.use(
   cors({
-    origin: (origin, callback) => {
+    origin: function (origin, callback) {
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
@@ -28,7 +28,7 @@ app.use(
     credentials: true,
   })
 );
-app.options("*", cors());
+
 app.use(exp.json())
 // Forward req to UserAPI if path start with /user-api
 app.use("/user-api", UserApp)
