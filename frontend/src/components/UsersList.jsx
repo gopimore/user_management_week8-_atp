@@ -10,8 +10,13 @@ function UsersList() {
   useEffect(() => {
     const BASE_URL = import.meta.env.VITE_API_URL;
     async function getUsers() {
+      const BASE_URL = import.meta.env.VITE_API_URL;
       try {
+<<<<<<< HEAD
         let res = await fetch(`${BASE_URL}/users`, {
+=======
+        let res = await fetch(`${BASE_URL}/user-api/users`, {
+>>>>>>> 3658020553c4145b0bef761ccc5a0248eac5993c
           method: "GET",
         });
 

@@ -12,7 +12,7 @@ const app =exp()
 // Add body parser middleware
 //add cors middleware
 app.use(cors({
-    origin:["http://localhost:5173"] // allow only frontend server
+    origin:["https://usermanagementweek8atp.vercel.app/"] // allow only frontend server
 }))
 app.use(exp.json())
 // Forward req to UserAPI if path start with /userr-api
