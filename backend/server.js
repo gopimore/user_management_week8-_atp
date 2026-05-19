@@ -9,6 +9,7 @@ import cors from 'cors'
 config();
 // Create HTTP server
 const app =exp()
+app.use(exp.json())
 // Add body parser middleware
 //add cors middleware
 const allowedOrigins = [
@@ -29,7 +30,7 @@ app.use(
   })
 );
 
-app.use(exp.json())
+
 // Forward req to UserAPI if path start with /user-api
 app.use("/user-api", UserApp)
 
