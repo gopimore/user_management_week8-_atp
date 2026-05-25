@@ -20,7 +20,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Overview
 
-This is the frontend application for the User Management System built using React.js and Vite.
+This is the frontend application for the **User Management System** built using **React.js** and **Vite**.
 
 The frontend provides:
 
@@ -37,7 +37,7 @@ The frontend provides:
 # Tech Stack
 
 | Technology | Purpose |
-|---|---|
+|------------|---------|
 | React.js | Frontend Library |
 | Vite | Build Tool |
 | React Router DOM | Routing |
@@ -51,12 +51,12 @@ The frontend provides:
 
 ## Authentication Features
 
-- User Registration Page
-- User Login Page
-- Persistent Login Sessions
+- User Registration
+- User Login
 - JWT Token Storage
+- Persistent Login Sessions
 - Logout Functionality
-- Protected Route Access
+- Protected Routes
 
 ---
 
@@ -72,6 +72,7 @@ The frontend provides:
 
 # Project Structure
 
+```bash
 frontend/
 │
 ├── public/
@@ -108,6 +109,7 @@ frontend/
 ├── package.json
 ├── vite.config.js
 └── README.md
+```
 
 ---
 
@@ -117,91 +119,188 @@ frontend/
 
 ```bash
 git clone https://github.com/gopimore/user_management_week8-_atp.git
-Authentication System
+```
+
+---
+
+## Navigate to Frontend Folder
+
+```bash
+cd frontend
+```
+
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file inside the frontend folder.
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+---
+
+# Running the Application
+
+## Development Mode
+
+```bash
+npm run dev
+```
+
+---
+
+## Production Build
+
+```bash
+npm run build
+```
+
+---
+
+# Authentication System
 
 The frontend handles authentication using:
 
-Zustand State Management
-JWT Token Storage
-Protected Routes
-Persistent Login Sessions
-State Management
-Zustand Store
+- Zustand State Management
+- JWT Token Storage
+- Protected Routes
+- Persistent Login Sessions
+
+---
+
+# State Management
+
+## Zustand Store
 
 The application uses Zustand for managing:
 
-Current User State
-Authentication Status
-Login Persistence
-Logout Handling
-Advantages
-Lightweight
-Fast Performance
-Easy Global State Management
-Minimal Boilerplate
-Routing System
+- Current User State
+- Authentication Status
+- Login Persistence
+- Logout Handling
+
+### Advantages
+
+- Lightweight
+- Fast Performance
+- Easy Global State Management
+- Minimal Boilerplate
+
+---
+
+# Routing System
 
 The application uses React Router DOM for navigation.
 
-Main Routes
-Route	Description
-/	Home Page
-/login	Login Page
-/register	Register Page
-/dashboard	Protected Dashboard
-/users	Users List
-API Integration
+## Main Routes
+
+| Route | Description |
+|-------|-------------|
+| / | Home Page |
+| /login | Login Page |
+| /register | Register Page |
+| /dashboard | Protected Dashboard |
+| /users | Users List |
+
+---
+
+# API Integration
 
 The frontend communicates with backend APIs using Axios / Fetch.
 
-API Operations
-Register User
-Login User
-Fetch Users
-Update User
-Delete User
-UI Features
-Responsive Layout
-Dynamic Rendering
-Form Validation
-Loading States
-Error Handling
-Conditional Rendering
-Security Features
-Protected Routes
-JWT Token Handling
-Secure API Requests
-Persistent Authentication
-Route Authorization
-Performance Optimizations
-Fast Vite Bundling
-Component-Based Architecture
-Reusable Components
-Optimized Rendering
-Lightweight State Management
-Deployment
-Frontend Deployment Platforms
-Platform	Purpose
-Vercel	Frontend Hosting
-Future Improvements
-Dark Mode
-Advanced Form Validation
-Pagination
-Search & Filters
-Role-Based Dashboards
-Toast Notifications
-Profile Image Upload
-Unit Testing
-TypeScript Migration
-Learning Outcomes
+## API Operations
+
+- Register User
+- Login User
+- Fetch Users
+- Update User
+- Delete User
+
+---
+
+# UI Features
+
+- Responsive Layout
+- Dynamic Rendering
+- Form Validation
+- Loading States
+- Error Handling
+- Conditional Rendering
+
+---
+
+# Security Features
+
+- Protected Routes
+- JWT Token Handling
+- Secure API Requests
+- Persistent Authentication
+- Route Authorization
+
+---
+
+# Performance Optimizations
+
+- Fast Vite Bundling
+- Component-Based Architecture
+- Reusable Components
+- Optimized Rendering
+- Lightweight State Management
+
+---
+
+# Deployment
+
+## Frontend Deployment Platforms
+
+| Platform | Purpose |
+|----------|---------|
+| Vercel | Frontend Hosting |
+
+---
+
+# Future Improvements
+
+- Dark Mode
+- Advanced Form Validation
+- Pagination
+- Search & Filters
+- Role-Based Dashboards
+- Toast Notifications
+- Profile Image Upload
+- Unit Testing
+- TypeScript Migration
+
+---
+
+# Learning Outcomes
 
 This frontend project demonstrates:
 
-React Component Architecture
-State Management using Zustand
-React Router Navigation
-API Integration
-Authentication Handling
-Protected Routes
-Frontend Deployment
-Responsive UI Design
+- React Component Architecture
+- State Management using Zustand
+- React Router Navigation
+- API Integration
+- Authentication Handling
+- Protected Routes
+- Frontend Deployment
+- Responsive UI Design
+
+---
+
+# Author
+
+## MORE GOPI
+
+GitHub:  
+https://github.com/gopimore
